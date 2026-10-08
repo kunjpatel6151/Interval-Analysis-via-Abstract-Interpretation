@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Phase 7: Static Analysis Checker > 12. six example programs generate correct formatted reports 1`] = `
+"line 2: SAFE overflow: 10 - x result ∈ [0, 10] is within int32 bounds
+line 3: POSSIBLE div-by-zero: divisor y ∈ [0, 10] may be zero
+line 5: SAFE div-by-zero: divisor y ∈ [1, 10] is non-zero
+
+Summary: 2 safe, 1 possible, 0 definite, 0 unreachable"
+`;
+
+exports[`Phase 7: Static Analysis Checker > 12. six example programs generate correct formatted reports 2`] = `
+"line 2: DEFINITE div-by-zero: divisor x ∈ [0, 0] is zero
+line 3: UNREACHABLE unreachable: code is unreachable
+
+Summary: 0 safe, 0 possible, 1 definite, 1 unreachable"
+`;
+
+exports[`Phase 7: Static Analysis Checker > 12. six example programs generate correct formatted reports 3`] = `
+"line 4: SAFE array-bounds: array index ∈ [0, 9] is within bounds [0,9]
+line 5: SAFE overflow: i + 1 result ∈ [1, 10] is within int32 bounds
+
+Summary: 2 safe, 0 possible, 0 definite, 0 unreachable"
+`;
+
+exports[`Phase 7: Static Analysis Checker > 12. six example programs generate correct formatted reports 4`] = `
+"line 2: POSSIBLE overflow: x * 2 result ∈ [0, 4000000000] may overflow int32
+line 4: SAFE overflow: a * 2 result ∈ [0, 200] is within int32 bounds
+
+Summary: 1 safe, 1 possible, 0 definite, 0 unreachable"
+`;
+
+exports[`Phase 7: Static Analysis Checker > 12. six example programs generate correct formatted reports 5`] = `
+"line 2: SAFE assertion: assertion assert(x > 0) holds
+line 4: POSSIBLE assertion: assertion assert(y > 0) may fail
+line 6: DEFINITE assertion: assertion assert(z > 10) always fails
+
+Summary: 1 safe, 1 possible, 1 definite, 0 unreachable"
+`;
+
+exports[`Phase 7: Static Analysis Checker > 12. six example programs generate correct formatted reports 6`] = `
+"line 2: UNREACHABLE unreachable: branch condition [x > 10] is never true
+line 2: UNREACHABLE unreachable: code is unreachable
+line 3: UNREACHABLE unreachable: code is unreachable
+
+Summary: 0 safe, 0 possible, 0 definite, 3 unreachable"
+`;

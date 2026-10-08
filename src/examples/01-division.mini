@@ -1,0 +1,6 @@
+int x = input(0, 10);
+int y = 10 - x;
+int z = 100 / y;
+if (y > 0) {
+  z = 100 / y;
+}

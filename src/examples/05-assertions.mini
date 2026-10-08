@@ -1,0 +1,6 @@
+int x = input(1, 5);
+assert(x > 0);
+int y = input(-5, 5);
+assert(y > 0);
+int z = 3;
+assert(z > 10);

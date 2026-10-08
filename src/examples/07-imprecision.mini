@@ -1,0 +1,3 @@
+int x = input(-5, 5);
+int y = x - x;
+int z = 100 / (y + 10);
